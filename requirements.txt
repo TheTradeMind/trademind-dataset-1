@@ -1,0 +1,26 @@
+# Core Libraries
+pandas>=1.3.0
+numpy>=1.21.0
+
+# Jupyter Environment
+jupyterlab>=3.0.0
+ipykernel
+
+# Data Processing & ML
+scikit-learn>=1.0.0
+nltk>=3.6.0 # For potential text processing
+
+# LLM Interaction (Example - adjust based on actual LLM used)
+# transformers>=4.10.0 # If using Hugging Face models
+# openai>=0.27.0 # If using OpenAI API
+
+# Data Visualization (Optional but recommended for notebooks)
+matplotlib>=3.4.0
+seaborn>=0.11.0
+
+# Utility
+requests>=2.25.0 # For potential data fetching
+
+# Technical Analysis (Optional - Example library)
+# ta-lib # Requires separate installation steps (see https://github.com/mrjbq7/ta-lib)
+# ta # Python wrapper for TA-Lib: pip install ta 

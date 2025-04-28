@@ -1,0 +1,629 @@
+# Trademind AI / LLM: Expanded Professional Prompt Suite
+# Advanced, enterprise-grade prompt templates for trading intelligence, market analysis, sentiment extraction, risk detection, and data transformation.
+
+## I. Market Summarization & Advanced Analysis
+
+### 1. Sentiment Extraction from News (Expanded)
+
+**Context:**  
+You have a batch of today's crypto news articles and want the LLM to deeply assess the market sentiment for a particular token, including reasoning, quantification, and theme extraction.
+
+**Prompt:**  
+"Based on the following news headlines and summaries, determine the overall sentiment toward [SYMBOL] today.  
+- Classify the sentiment as Positive, Neutral, or Negative.  
+- Provide a concise reasoning for your classification, citing specific headlines or phrases.  
+- Quantify the sentiment distribution (e.g., number of positive/negative/neutral headlines).  
+- Identify and briefly summarize the dominant themes or narratives present in the news.  
+- If sentiment is mixed or ambiguous, explain the main sources of uncertainty or conflicting signals."
+
+**[Input: List of news headlines and summaries for SYMBOL]**
+
+**Example Input:**  
+- "Bitcoin price surges as ETF approval looms closer"  
+- "Analyst warns of overheated Bitcoin market after rapid rally"  
+- "Regulatory pressure continues on crypto exchanges globally"
+
+**Example Output:**  
+- Sentiment: Neutral  
+- Reasoning: Positive momentum from ETF news is offset by regulatory concerns and warnings of overheating.  
+- Distribution: 1 Positive, 1 Negative, 1 Neutral  
+- Dominant Themes: ETF approval anticipation, regulatory scrutiny, market overheating concerns.
+
+**Additional Variants:**  
+- 1b. Repeat the above for the past week, and compare to the previous week.  
+  [Input: List of news headlines and summaries for SYMBOL, previous week headlines]  
+  - Quantify changes in sentiment and highlight any shifts in dominant themes.
+
+---
+
+### 2. Market Summary Generation
+
+**Context:**  
+Feed the LLM daily trading metrics and ask it to generate a market summary that can be shown to traders.
+
+**Prompt:**  
+"Generate a concise daily market report based on the following trading data and news highlights. Focus on major price changes, trading volume anomalies, and notable market events. Summarize the overall market mood and highlight any assets with outsized moves or news impact."
+
+**[Input: List of price changes, volume data, and news highlights]**
+
+**Example Input:**  
+- BTC: +3.4%, ETH: +2.1%, SOL: -1.7%  
+- Bitcoin trading volume up 25% compared to the previous day.  
+- News: 'SEC approves first Bitcoin ETF.'
+
+---
+
+### 3. Risk Alert Triggering
+
+**Context:**  
+You want the LLM to scan news and events and trigger warnings if risk factors (e.g., regulatory, liquidity) are mentioned.
+
+**Prompt:**  
+"Scan the following news articles and identify any potential risk factors for the crypto market. For each risk, classify it as Regulatory, Liquidity, Security, or Other. Provide a brief explanation for each identified risk and, if possible, assess its potential impact (Low/Medium/High)."
+
+**[Input: List of news headlines or article summaries]**
+
+**Example Input:**  
+- "Binance faces new lawsuit over alleged unlicensed operations."  
+- "Ethereum sees a spike in whale withdrawals to private wallets."  
+- "Polygon partners with major gaming publisher."
+
+---
+
+### 4. Price Prediction Reasoning (Narrative-Driven)
+
+**Context:**  
+Not giving numeric predictions (since LLMs can't reliably do that), but narrative-based prediction explanation.
+
+**Prompt:**  
+"Based on current trading trends and sentiment indicators, suggest possible market behavior for [SYMBOL] over the next week. Focus on reasoning, not specific price predictions. Discuss potential catalysts, risks, and the confidence level of your narrative."
+
+**[Input: Recent price changes, sentiment data, sector trends, and relevant metrics]**
+
+**Example Input:**  
+- SOL price: +5% daily  
+- High positive sentiment in DeFi and NFT sectors  
+- TVL (Total Value Locked) on Solana up 15% in one week
+
+---
+
+### 5. Trade Signal Justification
+
+**Context:**  
+Given a simple technical indicator cross (e.g., moving averages) + news sentiment, LLM should explain why a trade signal might make sense.
+
+**Prompt:**  
+"Given the following technical and sentiment data, explain whether a Buy or Sell signal is justified for [SYMBOL]. Provide reasoning that integrates both technical and news-based factors."
+
+**[Input: Technical indicator data, sentiment summary, relevant news]**
+
+**Example Input:**  
+- 50-day moving average crossed above 200-day moving average (Golden Cross).  
+- Positive sentiment: 'Ethereum poised for institutional adoption after major upgrade.'
+
+---
+
+### 6. Token Comparison Summary
+
+**Context:**  
+Compare two tokens side-by-side based on tokenomics and market activity.
+
+**Prompt:**  
+"Compare and contrast the investment potential of [SYMBOL_A] and [SYMBOL_B] based on the following tokenomics and market activity data. Highlight key differences in supply, inflation, recent developments, and any notable partnerships or events."
+
+**[Input: Tokenomics data, recent activity summaries for both tokens]**
+
+**Example Input:**  
+- AVAX circulating supply: 350M, inflation: 3%  
+- MATIC circulating supply: 9.2B, inflation: 2%  
+- Recent activity: Avalanche launch of subnet platform vs. Polygon partnership with major brand
+
+---
+
+## II. Sentiment Extraction & Interpretation
+
+8. Extract and classify the sentiment (Positive, Negative, Neutral) towards [SYMBOL] from the following text, providing a rationale for your classification and highlighting key sentiment drivers.
+   [Input: News headline, article snippet, or social media post]
+
+8b. Extract and classify the sentiment (Positive, Negative, Neutral) towards [SYMBOL] from the following two texts, providing a rationale for each classification and highlighting key sentiment drivers.
+   [Input: News headline or snippet 1]
+   [Input: News headline or snippet 2]
+
+9. Assess the aggregate market sentiment based on the following collection of headlines from the past 24 hours. Quantify the sentiment distribution and identify dominant themes.
+   [Input: List of recent headlines]
+
+9b. Assess the aggregate market sentiment based on the following collection of headlines from the past 48 hours. Quantify the sentiment distribution, identify dominant themes, and compare to the previous 48-hour period.
+   [Input: List of recent headlines]
+   [Input: Previous 48-hour headlines]
+
+10. Determine and explain the change in sentiment for [SYMBOL] before and after the following event, referencing specific language or data points that indicate a shift.
+    [Input: Event description]
+    [Input: Collection of headlines or social posts before and after event]
+
+10b. Determine and explain the change in sentiment for [SYMBOL] before and after each of the following two events, referencing specific language or data points that indicate a shift.
+    [Input: Event description 1]
+    [Input: Headlines/social posts before and after event 1]
+    [Input: Event description 2]
+    [Input: Headlines/social posts before and after event 2]
+
+11. Classify the sentiment of the following analyst report regarding [SYMBOL], summarize the main arguments, and assess the credibility of the analysis.
+    [Input: Analyst report text]
+
+11b. Classify the sentiment of the following two analyst reports regarding [SYMBOL], summarize the main arguments of each, and assess the credibility of both analyses.
+    [Input: Analyst report text 1]
+    [Input: Analyst report text 2]
+
+12. Extract sentiment trends for [SYMBOL] from a time series of news and social media posts, and visualize the evolution over the past week.
+    [Input: Timestamped sentiment data]
+
+12b. Extract sentiment trends for [SYMBOL] from a time series of news and social media posts, and visualize the evolution over the past two weeks. Compare the two most recent weeks.
+    [Input: Timestamped sentiment data]
+
+13. Identify and explain any discrepancies between news sentiment and price action for [SYMBOL] in the last 48 hours.
+    [Input: Sentiment data, price data]
+
+13b. Identify and explain any discrepancies between news sentiment and price action for [SYMBOL] in the last 96 hours, and compare to the previous 96-hour period.
+    [Input: Sentiment data, price data]
+    [Input: Previous 96-hour sentiment and price data]
+
+## III. Feature Explanation, Generation & Technical Context
+
+14. Explain the significance of the current [TECHNICAL_INDICATOR_NAME] value ([INDICATOR_VALUE]) for [SYMBOL] in the context of its recent price trend, and discuss potential trading implications.
+    [Input: Indicator name, value, symbol, recent price context]
+
+14b. Explain the significance of the current values for [TECHNICAL_INDICATOR_NAME_1] ([INDICATOR_VALUE_1]) and [TECHNICAL_INDICATOR_NAME_2] ([INDICATOR_VALUE_2]) for [SYMBOL] in the context of its recent price trend, and discuss potential trading implications.
+    [Input: Indicator name 1, value 1, symbol, recent price context]
+    [Input: Indicator name 2, value 2, symbol, recent price context]
+
+15. Given the recent price volatility and trading volume for [SYMBOL], recommend three advanced technical indicators or chart patterns that may provide additional insight for traders.
+    [Input: Recent volatility and volume data summary]
+
+15b. Given the recent price volatility and trading volume for [SYMBOL], recommend six advanced technical indicators or chart patterns that may provide additional insight for traders, and explain the rationale for each.
+    [Input: Recent volatility and volume data summary]
+
+16. Based on the tokenomics data for [SYMBOL] (supply, inflation, utility), identify and discuss potential long-term value drivers, risks, and catalysts for revaluation.
+    [Input: Tokenomics summary for SYMBOL]
+
+16b. Based on the tokenomics data for [SYMBOL] and [SYMBOL_2] (supply, inflation, utility), identify and discuss potential long-term value drivers, risks, and catalysts for revaluation for both assets, and compare them.
+    [Input: Tokenomics summary for SYMBOL]
+    [Input: Tokenomics summary for SYMBOL_2]
+
+17. Describe how the recent change in [ONCHAIN_METRIC] for [SYMBOL] could affect its price action, referencing historical precedents and current market structure.
+    [Input: On-chain metric name, value, and recent trend]
+
+17b. Describe how recent changes in [ONCHAIN_METRIC_1] and [ONCHAIN_METRIC_2] for [SYMBOL] could affect its price action, referencing historical precedents and current market structure.
+    [Input: On-chain metric 1 name, value, trend]
+    [Input: On-chain metric 2 name, value, trend]
+
+18. Generate a comprehensive list of plausible reasons for a sudden spike in trading volume for [SYMBOL] observed today, prioritizing explanations by likelihood and market impact.
+    [Input: Trade volume data, news headlines]
+
+18b. Generate a comprehensive list of plausible reasons for two sudden spikes in trading volume for [SYMBOL] observed this week, prioritizing explanations by likelihood and market impact for each event.
+    [Input: Trade volume data, news headlines]
+
+19. Explain the relationship between [SYMBOL]'s funding rates, open interest, and recent price movements, and infer potential market positioning.
+    [Input: Funding rate data, open interest, price action]
+
+19b. Explain the relationship between [SYMBOL]'s funding rates, open interest, and recent price movements over the last two weeks, and infer potential market positioning shifts.
+    [Input: Funding rate data, open interest, price action]
+
+20. Provide a technical breakdown of [SYMBOL]'s support and resistance levels based on the last 30 days of trading data.
+    [Input: Historical price data]
+
+20b. Provide a technical breakdown of [SYMBOL]'s support and resistance levels based on the last 60 days of trading data, and compare to the previous 60-day period.
+    [Input: Historical price data]
+    [Input: Previous 60-day price data]
+
+## IV. Predictive, Scenario-Based & Hypothetical Reasoning
+
+21. Generate actionable trading signals (e.g., entry/exit points, key levels, risk management considerations) for [SYMBOL] based on the provided technical analysis and news sentiment data. Include a disclaimer regarding financial advice.
+    [Input: Technical indicators, sentiment scores, recent price action]
+
+21b. Generate actionable trading signals (e.g., entry/exit points, key levels, risk management considerations) for [SYMBOL] and [SYMBOL_2] based on the provided technical analysis and news sentiment data. Include a disclaimer regarding financial advice.
+    [Input: Technical indicators, sentiment scores, recent price action for SYMBOL]
+    [Input: Technical indicators, sentiment scores, recent price action for SYMBOL_2]
+
+22. Evaluate the likely short-term and medium-term market reactions if a spot Bitcoin ETF is approved or rejected, referencing historical precedent, current market positioning, and macroeconomic context.
+    [Input: Context about ETF situation, current market state]
+
+22b. Evaluate the likely short-term and medium-term market reactions if a spot Bitcoin ETF is approved, rejected, or delayed, referencing historical precedent, current market positioning, and macroeconomic context.
+    [Input: Context about ETF situation, current market state]
+
+23. Predict the possible price movement and volatility for [SYMBOL] over the next 24 hours based on the following data, and provide a confidence interval for your forecast.
+    [Input: Recent price, volume, and news sentiment]
+
+23b. Predict the possible price movement and volatility for [SYMBOL] over the next 48 hours based on the following data, and provide a confidence interval for your forecast. Compare to the previous 48-hour forecast.
+    [Input: Recent price, volume, and news sentiment]
+    [Input: Previous 48-hour forecast]
+
+24. If [SYMBOL] breaks above or below the following key level, outline the most probable scenarios for its price in the next week, including potential catalysts and risk factors.
+    [Input: Key price level, recent price action, market context]
+
+24b. If [SYMBOL] or [SYMBOL_2] breaks above or below the following key levels, outline the most probable scenarios for their prices in the next week, including potential catalysts and risk factors.
+    [Input: Key price level for SYMBOL, recent price action, market context]
+    [Input: Key price level for SYMBOL_2, recent price action, market context]
+
+25. Simulate the market impact of a major regulatory announcement affecting [SYMBOL], and describe the expected sequence of price and sentiment changes.
+    [Input: Regulatory event description, current market data]
+
+25b. Simulate the market impact of two major regulatory announcements affecting [SYMBOL] and [SYMBOL_2], and describe the expected sequence of price and sentiment changes for each.
+    [Input: Regulatory event description for SYMBOL, current market data]
+    [Input: Regulatory event description for SYMBOL_2, current market data]
+
+26. Forecast the effect of a large whale transaction on [SYMBOL]'s short-term price and liquidity, referencing historical analogs.
+    [Input: Whale transaction details, historical trade data]
+
+26b. Forecast the effect of two large whale transactions on [SYMBOL]'s short-term price and liquidity, referencing historical analogs and comparing the two events.
+    [Input: Whale transaction details 1, historical trade data]
+    [Input: Whale transaction details 2, historical trade data]
+
+## V. Data Transformation, Aggregation & Entity Extraction
+
+27. Convert the following raw trade data points into a structured summary, highlighting average price, total volume, buy/sell ratio, and identifying any outlier trades for [SYMBOL] over the last hour.
+    [Input: List of recent trades]
+
+27b. Convert the following raw trade data points into a structured summary, highlighting average price, total volume, buy/sell ratio, and identifying any outlier trades for [SYMBOL] over the last two hours. Compare the two most recent hours.
+    [Input: List of recent trades]
+
+28. Extract and categorize key entities (organizations, people, specific crypto projects, regulatory bodies) mentioned in this financial news article, and summarize their relevance to [SYMBOL].
+    [Input: News article text] 
+
+28b. Extract and categorize key entities (organizations, people, specific crypto projects, regulatory bodies) mentioned in the following two financial news articles, and summarize their relevance to [SYMBOL].
+    [Input: News article text 1]
+    [Input: News article text 2]
+
+29. Transform the following list of trades into a candlestick (OHLCV) summary for [SYMBOL] for each 15-minute interval, and annotate intervals with significant price or volume anomalies.
+    [Input: List of timestamped trades]
+
+29b. Transform the following list of trades into a candlestick (OHLCV) summary for [SYMBOL] for each 5-minute and 15-minute interval, and annotate intervals with significant price or volume anomalies.
+    [Input: List of timestamped trades]
+
+30. Aggregate the following news headlines by topic, sentiment, and region, and provide a count and summary of headlines per topic for the last 48 hours.
+    [Input: List of news headlines]
+
+30b. Aggregate the following news headlines by topic, sentiment, and region, and provide a count and summary of headlines per topic for the last 96 hours. Compare to the previous 96-hour period.
+    [Input: List of news headlines]
+    [Input: Previous 96-hour headlines]
+
+31. Normalize and enrich the following trade data with additional metadata (e.g., exchange, order type), and output a standardized, analysis-ready dataset.
+    [Input: Raw trade data]
+
+31b. Normalize and enrich the following trade data with additional metadata (e.g., exchange, order type), and output a standardized, analysis-ready dataset for two different exchanges. Compare the results.
+    [Input: Raw trade data for Exchange 1]
+    [Input: Raw trade data for Exchange 2]
+
+32. Generate a time series of implied volatility for [SYMBOL] based on the following options data, and identify periods of volatility clustering.
+    [Input: Options trade data]
+
+32b. Generate a time series of implied volatility for [SYMBOL] and [SYMBOL_2] based on the following options data, and identify periods of volatility clustering for both assets.
+    [Input: Options trade data for SYMBOL]
+    [Input: Options trade data for SYMBOL_2]
+
+33. Cluster the following news headlines by semantic similarity and summarize the main themes emerging in the last 24 hours.
+    [Input: List of news headlines]
+
+33b. Cluster the following news headlines by semantic similarity and summarize the main themes emerging in the last 48 hours. Compare to the previous 48-hour period.
+    [Input: List of news headlines]
+    [Input: Previous 48-hour headlines]
+
+34. Create a cross-asset correlation matrix for the following set of symbols based on their recent price action, and highlight any statistically significant relationships.
+    [Input: List of symbols, historical price data]
+
+34b. Create a cross-asset correlation matrix for the following set of symbols based on their recent price action over the last two months, and highlight any statistically significant relationships. Compare to the previous two-month period.
+    [Input: List of symbols, historical price data]
+    [Input: Previous two-month historical price data]
+
+# Trademind AI / LLM: Expanded Professional Prompt Suite
+# Advanced, enterprise-grade prompt templates for trading intelligence, market analysis, sentiment extraction, risk detection, and data transformation.
+
+## I. Market Summarization & Advanced Analysis
+
+### 1. Sentiment Extraction from News (Expanded)
+
+**Context:**  
+You have a batch of today's crypto news articles and want the LLM to deeply assess the market sentiment for a particular token, including reasoning, quantification, and theme extraction.
+
+**Prompt:**  
+"Based on the following news headlines and summaries, determine the overall sentiment toward [SYMBOL] today.  
+- Classify the sentiment as Positive, Neutral, or Negative.  
+- Provide a concise reasoning for your classification, citing specific headlines or phrases.  
+- Quantify the sentiment distribution (e.g., number of positive/negative/neutral headlines).  
+- Identify and briefly summarize the dominant themes or narratives present in the news.  
+- If sentiment is mixed or ambiguous, explain the main sources of uncertainty or conflicting signals."
+
+**[Input: List of news headlines and summaries for SYMBOL]**
+
+**Example Input:**  
+- "Bitcoin price surges as ETF approval looms closer"  
+- "Analyst warns of overheated Bitcoin market after rapid rally"  
+- "Regulatory pressure continues on crypto exchanges globally"
+
+**Example Output:**  
+- Sentiment: Neutral  
+- Reasoning: Positive momentum from ETF news is offset by regulatory concerns and warnings of overheating.  
+- Distribution: 1 Positive, 1 Negative, 1 Neutral  
+- Dominant Themes: ETF approval anticipation, regulatory scrutiny, market overheating concerns.
+
+**Additional Variants:**  
+- 1b. Repeat the above for the past week, and compare to the previous week.  
+  [Input: List of news headlines and summaries for SYMBOL, previous week headlines]  
+  - Quantify changes in sentiment and highlight any shifts in dominant themes.
+
+---
+
+### 2. Market Summary Generation
+
+**Context:**  
+Feed the LLM daily trading metrics and ask it to generate a market summary that can be shown to traders.
+
+**Prompt:**  
+"Generate a concise daily market report based on the following trading data and news highlights. Focus on major price changes, trading volume anomalies, and notable market events. Summarize the overall market mood and highlight any assets with outsized moves or news impact."
+
+**[Input: List of price changes, volume data, and news highlights]**
+
+**Example Input:**  
+- BTC: +3.4%, ETH: +2.1%, SOL: -1.7%  
+- Bitcoin trading volume up 25% compared to the previous day.  
+- News: 'SEC approves first Bitcoin ETF.'
+
+---
+
+### 3. Risk Alert Triggering
+
+**Context:**  
+You want the LLM to scan news and events and trigger warnings if risk factors (e.g., regulatory, liquidity) are mentioned.
+
+**Prompt:**  
+"Scan the following news articles and identify any potential risk factors for the crypto market. For each risk, classify it as Regulatory, Liquidity, Security, or Other. Provide a brief explanation for each identified risk and, if possible, assess its potential impact (Low/Medium/High)."
+
+**[Input: List of news headlines or article summaries]**
+
+**Example Input:**  
+- "Binance faces new lawsuit over alleged unlicensed operations."  
+- "Ethereum sees a spike in whale withdrawals to private wallets."  
+- "Polygon partners with major gaming publisher."
+
+---
+
+### 4. Price Prediction Reasoning (Narrative-Driven)
+
+**Context:**  
+Not giving numeric predictions (since LLMs can't reliably do that), but narrative-based prediction explanation.
+
+**Prompt:**  
+"Based on current trading trends and sentiment indicators, suggest possible market behavior for [SYMBOL] over the next week. Focus on reasoning, not specific price predictions. Discuss potential catalysts, risks, and the confidence level of your narrative."
+
+**[Input: Recent price changes, sentiment data, sector trends, and relevant metrics]**
+
+**Example Input:**  
+- SOL price: +5% daily  
+- High positive sentiment in DeFi and NFT sectors  
+- TVL (Total Value Locked) on Solana up 15% in one week
+
+---
+
+### 5. Trade Signal Justification
+
+**Context:**  
+Given a simple technical indicator cross (e.g., moving averages) + news sentiment, LLM should explain why a trade signal might make sense.
+
+**Prompt:**  
+"Given the following technical and sentiment data, explain whether a Buy or Sell signal is justified for [SYMBOL]. Provide reasoning that integrates both technical and news-based factors."
+
+**[Input: Technical indicator data, sentiment summary, relevant news]**
+
+**Example Input:**  
+- 50-day moving average crossed above 200-day moving average (Golden Cross).  
+- Positive sentiment: 'Ethereum poised for institutional adoption after major upgrade.'
+
+---
+
+### 6. Token Comparison Summary
+
+**Context:**  
+Compare two tokens side-by-side based on tokenomics and market activity.
+
+**Prompt:**  
+"Compare and contrast the investment potential of [SYMBOL_A] and [SYMBOL_B] based on the following tokenomics and market activity data. Highlight key differences in supply, inflation, recent developments, and any notable partnerships or events."
+
+**[Input: Tokenomics data, recent activity summaries for both tokens]**
+
+**Example Input:**  
+- AVAX circulating supply: 350M, inflation: 3%  
+- MATIC circulating supply: 9.2B, inflation: 2%  
+- Recent activity: Avalanche launch of subnet platform vs. Polygon partnership with major brand
+
+---
+
+## II. Sentiment Extraction & Interpretation
+
+8. Extract and classify the sentiment (Positive, Negative, Neutral) towards [SYMBOL] from the following text, providing a rationale for your classification and highlighting key sentiment drivers.
+   [Input: News headline, article snippet, or social media post]
+
+8b. Extract and classify the sentiment (Positive, Negative, Neutral) towards [SYMBOL] from the following two texts, providing a rationale for each classification and highlighting key sentiment drivers.
+   [Input: News headline or snippet 1]
+   [Input: News headline or snippet 2]
+
+9. Assess the aggregate market sentiment based on the following collection of headlines from the past 24 hours. Quantify the sentiment distribution and identify dominant themes.
+   [Input: List of recent headlines]
+
+9b. Assess the aggregate market sentiment based on the following collection of headlines from the past 48 hours. Quantify the sentiment distribution, identify dominant themes, and compare to the previous 48-hour period.
+   [Input: List of recent headlines]
+   [Input: Previous 48-hour headlines]
+
+10. Determine and explain the change in sentiment for [SYMBOL] before and after the following event, referencing specific language or data points that indicate a shift.
+    [Input: Event description]
+    [Input: Collection of headlines or social posts before and after event]
+
+10b. Determine and explain the change in sentiment for [SYMBOL] before and after each of the following two events, referencing specific language or data points that indicate a shift.
+    [Input: Event description 1]
+    [Input: Headlines/social posts before and after event 1]
+    [Input: Event description 2]
+    [Input: Headlines/social posts before and after event 2]
+
+11. Classify the sentiment of the following analyst report regarding [SYMBOL], summarize the main arguments, and assess the credibility of the analysis.
+    [Input: Analyst report text]
+
+11b. Classify the sentiment of the following two analyst reports regarding [SYMBOL], summarize the main arguments of each, and assess the credibility of both analyses.
+    [Input: Analyst report text 1]
+    [Input: Analyst report text 2]
+
+12. Extract sentiment trends for [SYMBOL] from a time series of news and social media posts, and visualize the evolution over the past week.
+    [Input: Timestamped sentiment data]
+
+12b. Extract sentiment trends for [SYMBOL] from a time series of news and social media posts, and visualize the evolution over the past two weeks. Compare the two most recent weeks.
+    [Input: Timestamped sentiment data]
+
+13. Identify and explain any discrepancies between news sentiment and price action for [SYMBOL] in the last 48 hours.
+    [Input: Sentiment data, price data]
+
+13b. Identify and explain any discrepancies between news sentiment and price action for [SYMBOL] in the last 96 hours, and compare to the previous 96-hour period.
+    [Input: Sentiment data, price data]
+    [Input: Previous 96-hour sentiment and price data]
+
+## III. Feature Explanation, Generation & Technical Context
+
+14. Explain the significance of the current [TECHNICAL_INDICATOR_NAME] value ([INDICATOR_VALUE]) for [SYMBOL] in the context of its recent price trend, and discuss potential trading implications.
+    [Input: Indicator name, value, symbol, recent price context]
+
+14b. Explain the significance of the current values for [TECHNICAL_INDICATOR_NAME_1] ([INDICATOR_VALUE_1]) and [TECHNICAL_INDICATOR_NAME_2] ([INDICATOR_VALUE_2]) for [SYMBOL] in the context of its recent price trend, and discuss potential trading implications.
+    [Input: Indicator name 1, value 1, symbol, recent price context]
+    [Input: Indicator name 2, value 2, symbol, recent price context]
+
+15. Given the recent price volatility and trading volume for [SYMBOL], recommend three advanced technical indicators or chart patterns that may provide additional insight for traders.
+    [Input: Recent volatility and volume data summary]
+
+15b. Given the recent price volatility and trading volume for [SYMBOL], recommend six advanced technical indicators or chart patterns that may provide additional insight for traders, and explain the rationale for each.
+    [Input: Recent volatility and volume data summary]
+
+16. Based on the tokenomics data for [SYMBOL] (supply, inflation, utility), identify and discuss potential long-term value drivers, risks, and catalysts for revaluation.
+    [Input: Tokenomics summary for SYMBOL]
+
+16b. Based on the tokenomics data for [SYMBOL] and [SYMBOL_2] (supply, inflation, utility), identify and discuss potential long-term value drivers, risks, and catalysts for revaluation for both assets, and compare them.
+    [Input: Tokenomics summary for SYMBOL]
+    [Input: Tokenomics summary for SYMBOL_2]
+
+17. Describe how the recent change in [ONCHAIN_METRIC] for [SYMBOL] could affect its price action, referencing historical precedents and current market structure.
+    [Input: On-chain metric name, value, and recent trend]
+
+17b. Describe how recent changes in [ONCHAIN_METRIC_1] and [ONCHAIN_METRIC_2] for [SYMBOL] could affect its price action, referencing historical precedents and current market structure.
+    [Input: On-chain metric 1 name, value, trend]
+    [Input: On-chain metric 2 name, value, trend]
+
+18. Generate a comprehensive list of plausible reasons for a sudden spike in trading volume for [SYMBOL] observed today, prioritizing explanations by likelihood and market impact.
+    [Input: Trade volume data, news headlines]
+
+18b. Generate a comprehensive list of plausible reasons for two sudden spikes in trading volume for [SYMBOL] observed this week, prioritizing explanations by likelihood and market impact for each event.
+    [Input: Trade volume data, news headlines]
+
+19. Explain the relationship between [SYMBOL]'s funding rates, open interest, and recent price movements, and infer potential market positioning.
+    [Input: Funding rate data, open interest, price action]
+
+19b. Explain the relationship between [SYMBOL]'s funding rates, open interest, and recent price movements over the last two weeks, and infer potential market positioning shifts.
+    [Input: Funding rate data, open interest, price action]
+
+20. Provide a technical breakdown of [SYMBOL]'s support and resistance levels based on the last 30 days of trading data.
+    [Input: Historical price data]
+
+20b. Provide a technical breakdown of [SYMBOL]'s support and resistance levels based on the last 60 days of trading data, and compare to the previous 60-day period.
+    [Input: Historical price data]
+    [Input: Previous 60-day price data]
+
+## IV. Predictive, Scenario-Based & Hypothetical Reasoning
+
+21. Generate actionable trading signals (e.g., entry/exit points, key levels, risk management considerations) for [SYMBOL] based on the provided technical analysis and news sentiment data. Include a disclaimer regarding financial advice.
+    [Input: Technical indicators, sentiment scores, recent price action]
+
+21b. Generate actionable trading signals (e.g., entry/exit points, key levels, risk management considerations) for [SYMBOL] and [SYMBOL_2] based on the provided technical analysis and news sentiment data. Include a disclaimer regarding financial advice.
+    [Input: Technical indicators, sentiment scores, recent price action for SYMBOL]
+    [Input: Technical indicators, sentiment scores, recent price action for SYMBOL_2]
+
+22. Evaluate the likely short-term and medium-term market reactions if a spot Bitcoin ETF is approved or rejected, referencing historical precedent, current market positioning, and macroeconomic context.
+    [Input: Context about ETF situation, current market state]
+
+22b. Evaluate the likely short-term and medium-term market reactions if a spot Bitcoin ETF is approved, rejected, or delayed, referencing historical precedent, current market positioning, and macroeconomic context.
+    [Input: Context about ETF situation, current market state]
+
+23. Predict the possible price movement and volatility for [SYMBOL] over the next 24 hours based on the following data, and provide a confidence interval for your forecast.
+    [Input: Recent price, volume, and news sentiment]
+
+23b. Predict the possible price movement and volatility for [SYMBOL] over the next 48 hours based on the following data, and provide a confidence interval for your forecast. Compare to the previous 48-hour forecast.
+    [Input: Recent price, volume, and news sentiment]
+    [Input: Previous 48-hour forecast]
+
+24. If [SYMBOL] breaks above or below the following key level, outline the most probable scenarios for its price in the next week, including potential catalysts and risk factors.
+    [Input: Key price level, recent price action, market context]
+
+24b. If [SYMBOL] or [SYMBOL_2] breaks above or below the following key levels, outline the most probable scenarios for their prices in the next week, including potential catalysts and risk factors.
+    [Input: Key price level for SYMBOL, recent price action, market context]
+    [Input: Key price level for SYMBOL_2, recent price action, market context]
+
+25. Simulate the market impact of a major regulatory announcement affecting [SYMBOL], and describe the expected sequence of price and sentiment changes.
+    [Input: Regulatory event description, current market data]
+
+25b. Simulate the market impact of two major regulatory announcements affecting [SYMBOL] and [SYMBOL_2], and describe the expected sequence of price and sentiment changes for each.
+    [Input: Regulatory event description for SYMBOL, current market data]
+    [Input: Regulatory event description for SYMBOL_2, current market data]
+
+26. Forecast the effect of a large whale transaction on [SYMBOL]'s short-term price and liquidity, referencing historical analogs.
+    [Input: Whale transaction details, historical trade data]
+
+26b. Forecast the effect of two large whale transactions on [SYMBOL]'s short-term price and liquidity, referencing historical analogs and comparing the two events.
+    [Input: Whale transaction details 1, historical trade data]
+    [Input: Whale transaction details 2, historical trade data]
+
+## V. Data Transformation, Aggregation & Entity Extraction
+
+27. Convert the following raw trade data points into a structured summary, highlighting average price, total volume, buy/sell ratio, and identifying any outlier trades for [SYMBOL] over the last hour.
+    [Input: List of recent trades]
+
+27b. Convert the following raw trade data points into a structured summary, highlighting average price, total volume, buy/sell ratio, and identifying any outlier trades for [SYMBOL] over the last two hours. Compare the two most recent hours.
+    [Input: List of recent trades]
+
+28. Extract and categorize key entities (organizations, people, specific crypto projects, regulatory bodies) mentioned in this financial news article, and summarize their relevance to [SYMBOL].
+    [Input: News article text] 
+
+28b. Extract and categorize key entities (organizations, people, specific crypto projects, regulatory bodies) mentioned in the following two financial news articles, and summarize their relevance to [SYMBOL].
+    [Input: News article text 1]
+    [Input: News article text 2]
+
+29. Transform the following list of trades into a candlestick (OHLCV) summary for [SYMBOL] for each 15-minute interval, and annotate intervals with significant price or volume anomalies.
+    [Input: List of timestamped trades]
+
+29b. Transform the following list of trades into a candlestick (OHLCV) summary for [SYMBOL] for each 5-minute and 15-minute interval, and annotate intervals with significant price or volume anomalies.
+    [Input: List of timestamped trades]
+
+30. Aggregate the following news headlines by topic, sentiment, and region, and provide a count and summary of headlines per topic for the last 48 hours.
+    [Input: List of news headlines]
+
+30b. Aggregate the following news headlines by topic, sentiment, and region, and provide a count and summary of headlines per topic for the last 96 hours. Compare to the previous 96-hour period.
+    [Input: List of news headlines]
+    [Input: Previous 96-hour headlines]
+
+31. Normalize and enrich the following trade data with additional metadata (e.g., exchange, order type), and output a standardized, analysis-ready dataset.
+    [Input: Raw trade data]
+
+31b. Normalize and enrich the following trade data with additional metadata (e.g., exchange, order type), and output a standardized, analysis-ready dataset for two different exchanges. Compare the results.
+    [Input: Raw trade data for Exchange 1]
+    [Input: Raw trade data for Exchange 2]
+
+32. Generate a time series of implied volatility for [SYMBOL] based on the following options data, and identify periods of volatility clustering.
+    [Input: Options trade data]
+
+32b. Generate a time series of implied volatility for [SYMBOL] and [SYMBOL_2] based on the following options data, and identify periods of volatility clustering for both assets.
+    [Input: Options trade data for SYMBOL]
+    [Input: Options trade data for SYMBOL_2]
+
+33. Cluster the following news headlines by semantic similarity and summarize the main themes emerging in the last 24 hours.
+    [Input: List of news headlines]
+
+33b. Cluster the following news headlines by semantic similarity and summarize the main themes emerging in the last 48 hours. Compare to the previous 48-hour period.
+    [Input: List of news headlines]
+    [Input: Previous 48-hour headlines]
+
+34. Create a cross-asset correlation matrix for the following set of symbols based on their recent price action, and highlight any statistically significant relationships.
+    [Input: List of symbols, historical price data]
+
+34b. Create a cross-asset correlation matrix for the following set of symbols based on their recent price action over the last two months, and highlight any statistically significant relationships. Compare to the previous two-month period.
+    [Input: List of symbols, historical price data]
+    [Input: Previous two-month historical price data]
